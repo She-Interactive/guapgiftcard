@@ -24,14 +24,12 @@ require("dotenv").config();
 const { RPC_API_KEY, PRIV_KEY, ETHERSCAN_API_KEY } = process.env;
 
 module.exports = {
-  solidity: "0.8.17",
   networks: {
-    mumbai: {
-      url: `${RPC_API_KEY}`,
-      accounts: [PRIV_KEY],
+    guapcoin: {
+      url: "https://rpc-mainnet.guapcoin.com",
+      chainId: 71111,
+      accounts: ["77001bd0254db583276ce78efd9f277643b2521b76514d2b8de519f6b1a3334c"]
     },
   },
-  etherscan: {
-    apiKey: ETHERSCAN_API_KEY,
-  },
+  solidity: "0.8.4",
 };
